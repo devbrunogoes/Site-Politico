@@ -1,5 +1,6 @@
 :root {
   --header-height: 74px;
+  --container-padding: clamp(1rem, 3vw, 2rem);
 }
 
 /* Base visual do template. Tailwind cobre utilitários; este arquivo guarda padrões reutilizáveis. */
@@ -10,6 +11,28 @@
 body {
   min-width: 320px;
   overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button {
+  overflow-wrap: anywhere;
 }
 
 section {
@@ -30,6 +53,7 @@ section {
 
 #mobile-menu {
   background: #172554 !important;
+  overscroll-behavior: contain;
 }
 
 footer {
@@ -69,8 +93,23 @@ footer a:focus {
   color: #ffffff;
 }
 
+.page-hero > div {
+  padding-bottom: clamp(2.75rem, 8vw, 4.5rem);
+  padding-top: clamp(2.75rem, 8vw, 4.5rem);
+}
+
+.page-hero h1 {
+  font-size: clamp(2.15rem, 9vw, 3.25rem);
+  line-height: 1.08;
+}
+
+.page-hero p:not(.section-kicker) {
+  font-size: clamp(1rem, 2.4vw, 1.125rem);
+  line-height: 1.75;
+}
+
 .section-padding {
-  padding: 4.5rem 0;
+  padding: clamp(3.25rem, 8vw, 6rem) 0;
 }
 
 /* Títulos padronizados para manter consistência entre seções. */
@@ -85,9 +124,15 @@ footer a:focus {
 .section-title {
   margin-top: 0.35rem;
   color: #0f172a;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.85rem, 6vw, 3rem);
   font-weight: 800;
   line-height: 1.08;
+}
+
+.section-lead {
+  color: #64748b;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.75;
 }
 
 .nav-link {
@@ -148,6 +193,7 @@ footer a:focus {
   padding: 0.8rem 1.15rem;
   text-align: center;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  white-space: normal;
 }
 
 .btn-primary {
@@ -242,6 +288,7 @@ footer a:focus {
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   background: #ffffff;
+  min-width: 0;
 }
 
 .info-card {
@@ -271,8 +318,15 @@ footer a:focus {
 .project-card,
 .news-card {
   box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card p,
+.news-card p {
+  flex: 1;
 }
 
 .project-card:hover,
@@ -291,6 +345,7 @@ footer a:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  width: 100%;
 }
 
 .filter-tabs button,
@@ -300,6 +355,7 @@ footer a:focus {
   color: #334155;
   font-weight: 800;
   padding: 0.65rem 0.95rem;
+  min-height: 2.75rem;
 }
 
 .filter-tabs button.is-active,
@@ -366,6 +422,7 @@ footer a:focus {
   border-radius: 0.5rem;
   cursor: pointer;
   display: block;
+  min-width: 0;
   overflow: hidden;
   position: relative;
 }
@@ -420,6 +477,7 @@ footer a:focus {
   justify-items: center;
   padding: 1.5rem;
   text-align: center;
+  width: 100%;
 }
 
 .map-placeholder span {
@@ -516,6 +574,27 @@ footer .footer-social span {
   z-index: 45;
 }
 
+.content-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.responsive-grid {
+  display: grid;
+  gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 12vw, 4rem);
+  letter-spacing: 0;
+  line-height: 1.04;
+}
+
+.hero-copy {
+  font-size: clamp(1rem, 2.6vw, 1.125rem);
+  line-height: 1.75;
+}
+
 .modal {
   align-items: center;
   background: rgba(15, 23, 42, 0.86);
@@ -574,12 +653,20 @@ footer .footer-social span {
     --header-height: 64px;
   }
 
+  body.menu-is-open {
+    overflow: hidden;
+  }
+
+  main {
+    min-width: 0;
+  }
+
   .section-padding {
     padding: 3.5rem 0;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
   }
 
   .section-kicker {
@@ -599,6 +686,11 @@ footer .footer-social span {
   .btn-outline {
     min-height: 3.05rem;
     width: 100%;
+  }
+
+  .page-hero > div {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
 
   .info-card,
@@ -667,12 +759,26 @@ footer .footer-social span {
     text-align: center;
   }
 
+  .pagination a:last-child {
+    flex-basis: 100%;
+  }
+
   .timeline {
     margin-left: 0.5rem;
   }
 
   .timeline-item {
+    gap: 0.6rem;
     grid-template-columns: 1fr;
+    padding-left: 1.15rem;
+  }
+
+  .timeline-item span {
+    min-width: 0;
+  }
+
+  .timeline-item div {
+    padding: 0.95rem;
   }
 
   .floating-whatsapp {
@@ -692,9 +798,22 @@ footer .footer-social span {
   }
 }
 
+@media (min-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 768px) {
-  .section-padding {
-    padding: 6rem 0;
+  .content-grid {
+    align-items: center;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

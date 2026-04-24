@@ -41,24 +41,36 @@ function setupHeader() {
 
   document.querySelectorAll(`[data-page="${getCurrentPage()}"]`).forEach((link) => link.classList.add("is-active"));
 
+  function closeMenu() {
+    mobileMenu.classList.add("hidden");
+    menuToggle.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-is-open");
+  }
+
   menuToggle.addEventListener("click", () => {
     const isOpen = !mobileMenu.classList.contains("hidden");
     mobileMenu.classList.toggle("hidden", isOpen);
     menuToggle.classList.toggle("menu-open", !isOpen);
     menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    document.body.classList.toggle("menu-is-open", !isOpen);
   });
 
   mobileMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-      menuToggle.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeMenu);
   });
 
   window.addEventListener("scroll", () => {
     header.classList.toggle("header-scrolled", window.scrollY > 8);
   }, { passive: true });
+
+  window.addEventListener("resize", () => {
+    if (window.matchMedia("(min-width: 1024px)").matches) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
 }
 
 function createProjectCard(project) {
@@ -77,7 +89,7 @@ function createNewsCard(item) {
   return `
     <article class="news-card reveal bg-white">
       <img src="${item.image}" alt="Imagem da notícia ${item.title}" class="aspect-video w-full object-cover" />
-      <div class="p-6">
+      <div class="flex flex-1 flex-col p-6">
         <time class="text-sm font-bold text-brand-600">${item.date}</time>
         <h3 class="mt-3 text-xl font-extrabold text-slate-950">${item.title}</h3>
         <p class="mt-3 leading-7 text-slate-600">${item.summary}</p>
