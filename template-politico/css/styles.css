@@ -32,6 +32,34 @@ section {
   background: #172554 !important;
 }
 
+footer {
+  background: #172554 !important;
+  color: #ffffff !important;
+}
+
+footer a,
+footer p,
+footer h2,
+footer h3,
+footer div {
+  color: inherit;
+}
+
+footer p,
+footer .text-blue-100,
+footer .footer-social {
+  color: #dbeafe !important;
+}
+
+footer a {
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #ffffff !important;
+}
+
 .page-main {
   padding-top: var(--header-height);
 }
@@ -425,6 +453,20 @@ section {
   color: #dbeafe;
 }
 
+footer .footer-social {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0.5rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+}
+
+footer .footer-social:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
 .social-link span,
 .footer-social span {
   align-items: center;
@@ -441,6 +483,19 @@ section {
 
 .footer-social span {
   background: rgba(255, 255, 255, 0.18);
+}
+
+footer .footer-social span {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 0.72rem;
+  height: 1.45rem;
+  justify-content: center;
+  line-height: 1;
+  width: 1.45rem;
 }
 
 .floating-whatsapp {
