@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-label="Político em agenda pública">
+  <rect width="1000" height="800" fill="#eff6ff"/>
+  <rect x="0" y="520" width="1000" height="280" fill="#dbeafe"/>
+  <rect x="80" y="120" width="320" height="420" rx="12" fill="#ffffff"/>
+  <rect x="600" y="120" width="320" height="420" rx="12" fill="#ffffff"/>
+  <rect x="125" y="172" width="230" height="28" rx="14" fill="#1d4ed8"/>
+  <rect x="645" y="172" width="230" height="28" rx="14" fill="#1d4ed8"/>
+  <circle cx="500" cy="315" r="125" fill="#f1c7a8"/>
+  <path d="M375 300c14-90 66-146 141-146 64 0 111 39 129 104-82-31-170-21-270 42z" fill="#172554"/>
+  <path d="M290 800c26-214 105-322 210-322s184 108 210 322H290z" fill="#172554"/>
+  <path d="M395 800c12-145 47-224 105-224s93 79 105 224H395z" fill="#2563eb"/>
+  <path d="M454 574h92l-26 226h-40l-26-226z" fill="#f8fafc"/>
+  <circle cx="185" cy="640" r="64" fill="#1d4ed8"/>
+  <circle cx="815" cy="640" r="64" fill="#f5b942"/>
+  <path d="M455 395c31 20 62 20 93 0" fill="none" stroke="#172554" stroke-linecap="round" stroke-width="11"/>
+</svg>

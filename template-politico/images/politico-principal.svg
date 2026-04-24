@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-label="Retrato institucional genérico">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#bfdbfe"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#bg)"/>
+  <circle cx="680" cy="190" r="170" fill="#f5b942" opacity=".38"/>
+  <circle cx="250" cy="290" r="210" fill="#2563eb" opacity=".14"/>
+  <path fill="#172554" d="M150 1125c34-254 154-388 300-388s266 134 300 388H150z"/>
+  <path fill="#1d4ed8" d="M265 1125c12-185 79-305 185-305s173 120 185 305H265z"/>
+  <path fill="#f8fafc" d="M360 790h180l-38 335H398l-38-335z"/>
+  <path fill="#f5b942" d="M409 852h82l-18 273h-46l-18-273z"/>
+  <circle cx="450" cy="445" r="180" fill="#f1c7a8"/>
+  <path fill="#0f172a" d="M273 398c18-129 91-212 197-212 88 0 154 53 178 145-73-38-152-45-237-23-55 14-100 44-138 90z"/>
+  <path fill="#eab08f" d="M355 612c38 35 80 52 126 50 39-2 74-17 106-45-31 73-72 109-124 109-48 0-84-38-108-114z"/>
+  <rect x="356" y="430" width="55" height="18" rx="9" fill="#172554"/>
+  <rect x="492" y="430" width="55" height="18" rx="9" fill="#172554"/>
+  <path fill="none" stroke="#172554" stroke-linecap="round" stroke-width="14" d="M402 562c34 22 68 22 102 0"/>
+</svg>

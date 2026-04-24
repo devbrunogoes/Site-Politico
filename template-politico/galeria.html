@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafael Monteiro | Galeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="./js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+  <div data-component="header"></div>
+  <main class="page-main">
+    <section class="page-hero"><div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"><p class="section-kicker text-blue-100">Presença pública</p><h1 class="mt-3 text-4xl font-extrabold text-white sm:text-5xl">Galeria</h1><p class="mt-5 max-w-3xl text-lg leading-8 text-blue-50">Registros de reuniões, eventos e ações públicas de Rafael Monteiro em Santa Aurora.</p></div></section>
+    <section class="section-padding bg-white"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div id="gallery-grid" class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 md:gap-5"></div></div></section>
+  </main>
+  <div data-component="footer"></div>
+  <a href="https://wa.me/5511998762026" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">WA</a>
+  <div id="gallery-modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Imagem da galeria"><button id="modal-close" class="modal-close" aria-label="Fechar galeria">×</button><img id="modal-image" src="" alt="" /></div>
+  <script src="./js/script.js"></script>
+</body>
+</html>

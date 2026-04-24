@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site institucional de Rafael Monteiro, Vereador em Santa Aurora." />
+  <title>Rafael Monteiro | Início</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="./js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+  <div data-component="header"></div>
+
+  <main>
+    <section class="relative isolate overflow-hidden bg-brand-900 pt-24 text-white sm:pt-32">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(245,185,66,0.20),transparent_34%),linear-gradient(135deg,#172554_0%,#1d4ed8_52%,#2563eb_100%)]"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-8 px-4 pb-12 sm:px-6 md:grid-cols-[1fr_0.82fr] lg:gap-10 lg:px-8 lg:pb-20">
+        <div class="reveal">
+          <p class="mb-4 inline-flex max-w-full rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-blue-50">Santa Aurora</p>
+          <h1 class="max-w-3xl text-[2.45rem] font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">Rafael Monteiro</h1>
+          <p class="mt-4 text-lg font-semibold text-blue-100 sm:text-xl">Vereador</p>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-blue-50 sm:text-lg sm:leading-8">Trabalho perto das pessoas, transparência nas decisões e projetos que melhoram a vida em cada bairro.</p>
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="./trajetoria.html" class="btn-primary">Conhecer Trajetória</a>
+            <a href="./projetos.html" class="btn-secondary">Ver Projetos</a>
+            <a href="./contato.html" class="btn-secondary">Entrar em Contato</a>
+          </div>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-[19rem] sm:max-w-sm md:ml-auto md:max-w-md">
+          <div class="absolute -inset-5 rounded-full bg-civic-gold/20 blur-2xl"></div>
+          <img src="./images/politico-principal.svg" alt="Foto principal de Rafael Monteiro" class="relative aspect-[4/5] w-full rounded-2xl border border-white/20 bg-white/10 object-cover shadow-2xl sm:rounded-[2rem]" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+        <img src="./images/politico-secundaria.svg" alt="Foto institucional de Rafael Monteiro" class="reveal aspect-[5/4] w-full rounded-lg object-cover shadow-soft" />
+        <div class="reveal">
+          <p class="section-kicker">Trajetória</p>
+          <h2 class="section-title">Uma história construída com presença pública</h2>
+          <p class="mt-5 leading-8 text-slate-600">Rafael Monteiro é vereador de Santa Aurora e iniciou sua vida pública em associações de bairro, onde atuou na defesa de melhorias em saúde, educação e infraestrutura. Seu mandato é marcado por gabinete itinerante, prestação de contas acessível e diálogo constante com moradores, lideranças e equipes técnicas.</p>
+          <a href="./trajetoria.html" class="btn-outline mt-7">Ler trajetória completa</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker">Mandato em ação</p>
+            <h2 class="section-title">Projetos em destaque</h2>
+          </div>
+          <a href="./projetos.html" class="btn-outline">Ver todos</a>
+        </div>
+        <div id="home-projects" class="mt-10 grid gap-6 md:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker">Atualizações</p>
+            <h2 class="section-title">Últimas notícias</h2>
+          </div>
+          <a href="./noticias.html" class="btn-outline">Ver notícias</a>
+        </div>
+        <div id="home-news" class="mt-10 grid gap-6 lg:grid-cols-3"></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-component="footer"></div>
+  <a href="https://wa.me/5511998762026" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">WA</a>
+  <script src="./js/script.js"></script>
+</body>
+</html>
